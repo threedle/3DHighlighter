@@ -1,4 +1,4 @@
-name: highlighter
+name: 3DHighlighter
 channels:
   - pytorch
   - conda-forge
