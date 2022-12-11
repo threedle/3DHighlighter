@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Localizing Regions on 3D Shapes via Text Descriptions.">
+  <meta name="keywords" content="3D Highlighter, Neural Field">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>3D Highlighter</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.ico">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="https://ddecatur.github.io">
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
+      </a>
+    </div>
+
+  </div>
+</nav>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title"><span style="text-shadow: 2px 2px 0px #CCFF00">3D Highlighter</span>: Localizing Regions on 3D Shapes via Text Descriptions</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://ddecatur.github.io">Dale Decatur</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=q0bBhtsAAAAJ&hl=en">Itai Lang</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://people.cs.uchicago.edu/~ranahanocka/">Rana Hanocka</a><sup>1</sup>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>University of Chicago</span>
+            <!-- <span class="author-block"><sup>2</sup>Tel Aviv University</span> -->
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <!-- <a href="https://arxiv.org/pdf/2112.03485.pdf" -->
+                <a href="https://drive.google.com/file/d/1Ak2MZl09jtM84sRfjgP-Tfs_a9ulTmTx/view?usp=share_link"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <!-- arXiv Link -->
+              <!-- <span class="link-block">
+                <a href="https://arxiv.org/abs/2112.03485"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span> -->
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/threedle/3DHighlighter"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <image id="teaser">
+        <img src="./static/images/teaser_captioned.png"
+                type="image/png">
+      </image>
+      <h2 class="subtitle has-text-centered">
+        <span class="highlighter_font">3D Highlighter</span> highlights semantic regions on 3D meshes.
+      </h2>
+      <!-- <hr class="divider" /> -->
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            We present <span class="highlighter_font">3D Highlighter</span>, a technique for localizing semantic regions on a mesh using text as input.
+            A key feature of our system is the ability to interpret “out-of-domain” localizations.
+            Our system demonstrates the ability to reason about where to place non-obviously related concepts
+            on an input 3D shape, such as adding clothing to a bare 3D animal model.
+            Our method contextualizes the text description using a neural field and colors the corresponding
+            region of the shape using a probability-weighted blend.
+            Our neural optimization is guided by a pre-trained CLIP encoder, which bypasses the need for
+            any 3D datasets or 3D annotations.
+            Thus, <span class="highlighter_font">3D Highlighter</span> is highly flexible, general, and capable of producing localizations
+            on a myriad of input shapes.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+    
+
+    <!-- Results. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <hr class="divider" />
+        <h2 class="title is-3">Semantic Highlighting</h2>
+        <div class="content has-text-justified">
+          <p>
+            <span class="highlighter_font">3D Highlighter</span> is able to reason about where to highlight a geometrically-absent region on shape.
+            The resulting localizations demonstrate global understanding and localized part-awareness.
+          </p>
+        </div>
+        <img src="./static/images/gallery.png">
+      </div>
+    </div>
+    <!--/ Results  -->
+
+    <!-- Overview. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <hr class="divider" />
+        <h2 class="title is-3">Overview</h2>
+        <div class="overview-image">
+          <img src="./static/images/overview.png" type="image/png">
+        </div>
+        <div class="content has-text-justified">
+          <p>
+            The <span style="color: #B2D900">Neural Highlighter</span> maps each point on the <span style="color: #80D999">input mesh</span> to a probability. The mesh is colored
+    using a probability-weighted blend and then <span style="color: #8080E6">rendered</span> from multiple views. The neural highlighter weights are guided by the similarity
+    between the <span style="color: #FDBC42">CLIP embeddings</span> of the 2D augmented images and the <span style="color: #80D999">input text</span>.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Overview. -->
+
+    <!-- Applications. -->
+    <!-- <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <hr class="divider" />
+        <h2 class="title is-3">Applications</h2>
+        <h2 class="title is-5 has-text-left">Localized Editing</h2>
+        <div class="content has-text-justified">
+          <p>
+            We incorporate textures and displacements to a region highlighted with 3D Highlighter.
+            Here, we show the flower region of the lamp styled with a brick texture (left),
+            the poncho region of the horse styled with a colorful crochet texture (middle),
+            and the laces region of the shoe styled with a cactus texture (right).
+          </p>
+        </div>
+        <img src="./static/images/localized_editing.png">
+      </div>
+    </div> -->
+    <!--/ Applications. -->
+
+  </div>
+</section>
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{decatur2022highlighter,
+  author    = {Decatur, Dale and Lang, Itai and Hanocka, Rana},
+  title     = {3D Highlighter: Localizing Regions on 3D Shapes via Text Descriptions},
+  journal   = {arXiv},
+  year      = {2022},
+}</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link" href="https://github.com/ddecatur" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is based off of the <a href="https://github.com/nerfies/nerfies.github.io">nerfies website</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
