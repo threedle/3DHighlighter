@@ -40,5 +40,5 @@ If the result of the optimizaiton does not match the expected result, try re-run
          title  = {3D Highlighter: Localizing Regions on 3D Shapes via Text Descriptions},
          journal = {arXiv},
          year = {2022}
-         }
+}
 ```
