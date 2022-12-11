@@ -18,7 +18,7 @@ body {
 }
 
 .threedle-icon {
-    background: url('../images/threedle-icon.png');
+    background: url('/3DHighlighter/static/images/threedle-icon.png');
     background-size: contain;
     background-repeat: no-repeat;
     height: 50px;
