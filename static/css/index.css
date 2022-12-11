@@ -17,6 +17,14 @@ body {
   /* font-variant: small-caps; */
 }
 
+.threedle-icon {
+    background: url('../images/threedle-icon.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 50px;
+    width: 100px;
+    display: block;
+}
 
 .teaser .hero-body {
   padding-top: 0;
