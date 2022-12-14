@@ -8,9 +8,9 @@ Abstract: *We present 3D Highlighter, a technique for localizing semantic region
 
 
 <!-- ### [[Project Page](https://threedle.github.io/3DHighlighter/)] [[ArXiv]()] -->
-<a href=""><img src="https://img.shields.io/badge/arXiv-3DHighlighter-b31b1b.svg" height=22.5></a>
+<a href="https://threedle.github.io/3DHighlighter/static/media/paper.pdf"><img src="https://img.shields.io/badge/arXiv-3DHighlighter-b31b1b.svg" height=22.5></a>
 <a href="https://threedle.github.io/3DHighlighter"><img src="https://img.shields.io/website?down_color=lightgrey&down_message=offline&label=Project%20Page&up_color=lightgreen&up_message=online&url=https%3A%2F%2Fpals.ttic.edu%2Fp%2Fscore-jacobian-chaining" height=22.5></a>
-<!-- [![arXiv](https://img.shields.io/badge/arXiv-3DHighlighter-b31b1b.svg)]() -->
+<!-- [![arXiv](https://img.shields.io/badge/arXiv-3DHighlighter-b31b1b.svg)](media/paper.pdf) -->
 <!-- ![Pytorch](https://img.shields.io/badge/PyTorch->=1.12.1-Red?logo=pytorch) -->
 <!-- ![CUDA](https://img.shields.io/badge/CUDA->=11.3.1-Red?logo=CUDA) -->
 
