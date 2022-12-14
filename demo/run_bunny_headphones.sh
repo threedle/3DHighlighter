@@ -1,0 +1,1 @@
+python main.py --obj_path data/bunny.obj --output_dir results/demo_bunny/headphones --seed 0 --classes headphones --object bunny --n_iter 2500 --frontview_center 0 0 --frontview_std 4
