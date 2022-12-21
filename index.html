@@ -65,14 +65,13 @@
 
           <div class="is-size-5 publication-authors">
             <span class="author-block"><sup></sup>University of Chicago</span>
-            <!-- <span class="author-block"><sup>2</sup>Tel Aviv University</span> -->
           </div>
 
           <div class="column has-text-centered">
             <div class="publication-links">
               <!-- PDF Link. -->
               <span class="link-block">
-                <!-- <a href="https://arxiv.org/pdf/2112.03485.pdf" -->
+                <!-- TODO: change to arXiv link -->
                 <a href="https://threedle.github.io/3DHighlighter/static/media/3DHighlighter.pdf"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
@@ -81,16 +80,16 @@
                   <span>Paper</span>
                 </a>
               </span>
-              <!-- arXiv Link -->
-              <!-- <span class="link-block">
-                <a href="https://arxiv.org/abs/2112.03485"
+              <span class="link-block">
+                <!-- TODO: change to arXiv link -->
+                <a href=""
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="ai ai-arxiv"></i>
                   </span>
                   <span>arXiv</span>
                 </a>
-              </span> -->
+              </span>
               <!-- Code Link. -->
               <span class="link-block">
                 <a href="https://github.com/threedle/3DHighlighter"
@@ -114,19 +113,73 @@
   <div class="container is-max-desktop">
     <div class="hero-body">
       <image id="teaser">
-        <img src="./static/images/teaser_captioned.png"
+        <img src="./static/images/figures/teaser_captioned.png"
                 type="image/png">
       </image>
-      <!-- <h2 class="subtitle has-text-centered">
-        <span class="highlighter_font">3D Highlighter</span> highlights semantic regions on 3D meshes.
-      </h2> -->
       <h2 class="subtitle has-text-centered">
         3D Highlighter localizes semantic regions on a shape using text as input.
         Our technique reasons about where to place seemingly unrelated concepts in
         semantically meaningful locations on the 3D shape, such as a 'necklace' on
         a horse or 'shoes' on an alien.
       </h2>
-      <!-- <hr class="divider" /> -->
+    </div>
+  </div>
+</section>
+
+
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-bunny-headphones">
+            <video poster="" id="bunny-headphones" autoplay muted loop playsinline height="100%">
+                <source src="./static/videos/bunny_headphones.mp4" type="video/mp4">
+            </video>
+            <p class="has-text-centered">Headphones</p>
+        </div>
+        <div class="item item-person-necklace">
+          <video poster="" id="person-necklace" autoplay muted loop playsinline height="100%">
+            <source src="./static/videos/person_necklace.mp4" type="video/mp4">
+          </video>
+          <p class="has-text-centered">Necklace</p>
+        </div>
+        <div class="item item-vase-arms">
+            <video poster="" id="vase-arms" autoplay muted loop playsinline height="100%">
+                <source src="./static/videos/vase_arms.mp4" type="video/mp4">
+            </video>
+            <p class="has-text-centered">Arms</p>
+        </div>
+        <div class="item item-horse-poncho">
+            <video poster="" id="horse-poncho" autoplay muted loop playsinline height="100%">
+                <source src="./static/videos/horse_poncho.mp4" type="video/mp4">
+            </video>
+            <p class="has-text-centered">Poncho</p>
+        </div>
+        <div class="item item-pig-belt">
+            <video poster="" id="pig-belt" autoplay muted loop playsinline height="100%">
+                <source src="./static/videos/pig_belt.mp4" type="video/mp4">
+            </video>
+            <p class="has-text-centered">Belt</p>
+        </div>
+        <div class="item item-dragon-necklace">
+            <video poster="" id="dragon-necklace" autoplay muted loop playsinline height="100%">
+                <source src="./static/videos/dragon_necklace.mp4" type="video/mp4">
+            </video>
+            <p class="has-text-centered">Necklace</p>
+        </div>
+        <div class="item item-dog-hat">
+            <video poster="" id="dog-hat" autoplay muted loop playsinline height="100%">
+              <source src="./static/videos/dog_hat.mp4" type="video/mp4">
+            </video>
+            <p class="has-text-centered">Hat</p>
+        </div>
+        <div class="item item-candle-hair">
+            <video poster="" id="candle-hair" autoplay muted loop playsinline height="100%">
+                <source src="./static/videos/candle_hair.mp4" type="video/mp4">
+            </video>
+            <p class="has-text-centered">Hair</p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -155,8 +208,6 @@
     </div>
     <!--/ Abstract. -->
 
-    
-
     <!-- Results. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
@@ -168,7 +219,7 @@
             The resulting localizations demonstrate global understanding and localized part-awareness.
           </p>
         </div>
-        <img src="./static/images/gallery.png">
+        <img src="./static/images/figures/gallery.png">
       </div>
     </div>
     <!--/ Results  -->
@@ -177,40 +228,21 @@
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <hr class="divider" />
-        <h2 class="title is-3">Overview</h2>
+        <h2 class="title is-3">Network Overview</h2>
         <div class="overview-image">
-          <img src="./static/images/overview.png" type="image/png">
+          <img src="./static/images/figures/overview.png" type="image/png">
         </div>
         <div class="content has-text-justified">
           <p>
-            The <span style="color: #B2D900">Neural Highlighter</span> maps each point on the <span style="color: #80D999">input mesh</span> to a probability. The mesh is colored
-    using a probability-weighted blend and then <span style="color: #8080E6">rendered</span> from multiple views. The neural highlighter weights are guided by the similarity
-    between the <span style="color: #FDBC42">CLIP embeddings</span> of the 2D augmented images and the <span style="color: #80D999">input text</span>.
+            The <span style="color: #B2D900">Neural Highlighter</span> maps each point on the <span style="color: #80D999">input mesh</span> to a probability.
+            The mesh is colored using a probability-weighted blend and then <span style="color: #8080E6">rendered</span> from multiple views.
+            The neural highlighter weights are guided by the similarity between the <span style="color: #FDBC42">CLIP embeddings</span> of the
+            2D augmented images and the <span style="color: #80D999">input text</span>.
           </p>
         </div>
       </div>
     </div>
     <!--/ Overview. -->
-
-    <!-- Applications. -->
-    <!-- <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <hr class="divider" />
-        <h2 class="title is-3">Applications</h2>
-        <h2 class="title is-5 has-text-left">Localized Editing</h2>
-        <div class="content has-text-justified">
-          <p>
-            We incorporate textures and displacements to a region highlighted with 3D Highlighter.
-            Here, we show the flower region of the lamp styled with a brick texture (left),
-            the poncho region of the horse styled with a colorful crochet texture (middle),
-            and the laces region of the shoe styled with a cactus texture (right).
-          </p>
-        </div>
-        <img src="./static/images/localized_editing.png">
-      </div>
-    </div> -->
-    <!--/ Applications. -->
-
   </div>
 </section>
 
@@ -230,7 +262,7 @@
 <footer class="footer">
   <div class="container">
     <div class="content has-text-centered">
-      <a class="icon-link" href="https://github.com/ddecatur" class="external-link" disabled>
+      <a class="icon-link" href="https://github.com/threedle/3DHighlighter" class="external-link" disabled>
         <i class="fab fa-github"></i>
       </a>
     </div>
@@ -238,7 +270,11 @@
       <div class="column is-8">
         <div class="content">
           <p>
-            This website is based off of the <a href="https://github.com/nerfies/nerfies.github.io">nerfies website</a>.
+            This website is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <p>
+            Parts of the code for this website are reused from the <a href="https://github.com/nerfies/nerfies.github.io">source code</a> contributed by the authors of <a href="https://nerfies.github.io/">Nerfies</a>.
           </p>
         </div>
       </div>
