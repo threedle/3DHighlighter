@@ -1,4 +1,4 @@
-# 3D Highlighter: Localizing Regions on 3D Shapes via Text Descriptions
+# 3D Highlighter: Localizing Regions on 3D Shapes via Text Descriptions [CVPR 2023]
 
 *[Dale Decatur](https://ddecatur.github.io/), [Itai Lang](https://scholar.google.com/citations?user=q0bBhtsAAAAJ&hl=en), [Rana Hanocka](https://people.cs.uchicago.edu/~ranahanocka/)*
 
