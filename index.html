@@ -53,6 +53,7 @@
       <div class="columns is-centered">
         <div class="column has-text-centered">
           <h1 class="title is-1 publication-title"><span style="text-shadow: 2px 2px 0px #CCFF00">3D Highlighter</span>: Localizing Regions on 3D Shapes via Text Descriptions</h1>
+          <h1 class="is-size-4 publication-title">CVPR 2023 (Highlight)</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
               <a href="https://ddecatur.github.io">Dale Decatur</a><sup></sup>,</span>
@@ -207,7 +208,7 @@
     <!--/ Abstract. -->
 
     <!-- Results. -->
-    <div class="columns is-centered has-text-centered">
+    <!-- <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <hr class="divider" />
         <h2 class="title is-3">Semantic Highlighting</h2>
@@ -219,8 +220,8 @@
         </div>
         <img src="./static/images/figures/gallery.png">
       </div>
-    </div>
-    <!--/ Results  -->
+    </div> -->
+    <!--/ Results.  -->
 
     <!-- Overview. -->
     <div class="columns is-centered has-text-centered">
@@ -241,16 +242,107 @@
       </div>
     </div>
     <!--/ Overview. -->
+
+    <!-- Semantic Highlighting. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <hr class="divider" />
+        <h2 class="title is-3">Semantic Highlighting</h2>
+        <div class="content has-text-justified">
+          <p>
+            <span class="highlighter_font">3D Highlighter</span> is able localize different text-specified regions on the same mesh. Our framework demonstrates the nuanced understanding required to disambiguate similar, yet distinct target text specifications such as headphones and hat on the rabbit. Additionally, our method demonstrates global semantic understanding by correctly localizing regions such as the belt and necklace on the dog which have nearly identical geometry in the localization region.
+          </p>
+        </div>
+        <div class="overview-image">
+          <img src="./static/images/figures/multi_target.png" type="image/png">
+        </div>
+      </div>
+    </div>
+    <!--/ Semantic Highlighting. -->
+
+    <!-- Applications. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <hr class="divider" />
+        <h2 class="title is-3">Applications</h2>
+        <div class="content has-text-justified">
+          <p>
+            <span class="highlighter_font">3D Highlighter</span> can be used to achieve localized stylization of meshes. Once we localize a region with our method, we can apply a predefined color and texture to only that region.
+          </p>
+        </div>
+        <div class="overview-image">
+          <img src="./static/images/figures/edit.png" type="image/png">
+        </div>
+        <div class="content has-text-justified">
+          <p>
+            The styles used in the above image are Brick (left), Colorful Crochet (middle), Cactus (right).
+          </p>
+          <p>
+            We can also compute the localization of multiple regions and use those localizations to composite different styles together on a single mesh.
+          </p>
+        </div>
+        <div class="overview-image">
+          <img src="./static/images/figures/swap.png" type="image/png">
+        </div>
+        <div class="content has-text-justified">
+          <p>
+            Given three different stylizations of the same object (Iron Man, Steve Jobs, and Yeti), we use <span class="highlighter_font">3D Highlighter</span> to select different regions and combine them together (Ours).
+          </p>
+          <p>
+            In addtion to stylization, <span class="highlighter_font">3D Highlighter</span> can be used to perform geometric edits. Once we have localized a region, we can manipulate the geometry of the mesh with operations such as extrusion, stretching, deletion, and selection.
+          </p>
+        </div>
+        <div class="overview-image">
+          <img src="./static/images/figures/geometric_edits.png" type="image/png">
+        </div>
+      </div>
+    </div>
+    <!--/ Applications. -->
+
+    <!-- Limitations. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <hr class="divider" />
+        <h2 class="title is-3">Limitations</h2>
+        <div class="content has-text-justified">
+          <p>
+            The strength of the supervision signal can vary for different mesh and prompt combinations. In cases where the signal is strong, non-determinism has little to no impact and the optimization produces nearly identical results every run. However, when the supervision signal is weaker, the optimization is more sensitive to non-determinism and we see that the highlighted regions can differ significantly between runs.
+            For example, when applied to this human mesh, 3D Highlighter is robust to different seeds when using the target prompt shoes (left); while the target prompt necklace produces more variable results (right).
+          </p>
+        </div>
+        <div class="overview-image">
+          <img src="./static/images/figures/sensitivity.png" type="image/png">
+        </div>
+      </div>
+    </div>
+    <!--/ Limitations. -->
+
+    <!-- Gallery. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <hr class="divider" />
+        <h2 class="title is-3">Gallery</h2>
+        <div class="content has-text-justified">
+          <p>
+            We present a gallery of results with additional mesh and prompt combinations.
+          </p>
+        </div>
+        <div class="overview-image">
+          <img src="./static/images/figures/gallery.png" type="image/png">
+        </div>
+      </div>
+    </div>
+    <!--/ Gallery. -->
   </div>
 </section>
 
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
-    <pre><code>@article{decatur2022highlighter,
+    <pre><code>@InProceedings{decatur2022highlighter,
   author    = {Decatur, Dale and Lang, Itai and Hanocka, Rana},
   title     = {3D Highlighter: Localizing Regions on 3D Shapes via Text Descriptions},
-  journal   = {arXiv},
+  journal   = {CVPR},
   year      = {2022},
 }</code></pre>
   </div>
