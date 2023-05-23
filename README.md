@@ -4,10 +4,10 @@ This is the repository that contains source code for the [3D Highlighter website
 
 If you find 3D Highlighter useful for your work please cite:
 ```
-@article{decatur2022highlighter
+@InProceedings{decatur2022highlighter
   author    = {Decatur, Dale and Lang, Itai and Hanocka, Rana},
   title     = {3D Highlighter: Localizing Regions on 3D Shapes via Text Descriptions},
-  journal   = {arXiv},
+  journal   = {CVPR},
   year      = {2022},
 }
 ```
