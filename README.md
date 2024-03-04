@@ -4,11 +4,12 @@ This is the repository that contains source code for the [3D Highlighter website
 
 If you find 3D Highlighter useful for your work please cite:
 ```
-@InProceedings{decatur2022highlighter
-  author    = {Decatur, Dale and Lang, Itai and Hanocka, Rana},
-  title     = {3D Highlighter: Localizing Regions on 3D Shapes via Text Descriptions},
-  journal   = {CVPR},
-  year      = {2022},
+@inproceedings{decatur2023highlighter,
+    title={3d highlighter: Localizing regions on 3d shapes via text descriptions},
+    author={Decatur, Dale and Lang, Itai and Hanocka, Rana},
+    booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+    pages={20930--20939},
+    year={2023}
 }
 ```
 
