@@ -194,13 +194,13 @@ def clip_loss(args, rendered_images, encoded_text, clip_transform, augment_trans
         encoded_renders = encoded_renders / encoded_renders.norm(dim=1, keepdim=True)
         if args.clipavg == "view":
             if encoded_text.shape[0] > 1:
-                loss = torch.cosine_similarity(torch.mean(encoded_renders, dim=0),
+                loss = -torch.cosine_similarity(torch.mean(encoded_renders, dim=0),
                                                 torch.mean(encoded_text, dim=0), dim=0)
             else:
-                loss = torch.cosine_similarity(torch.mean(encoded_renders, dim=0, keepdim=True),
+                loss = -torch.cosine_similarity(torch.mean(encoded_renders, dim=0, keepdim=True),
                                                 encoded_text)
         else:
-            loss = torch.mean(torch.cosine_similarity(encoded_renders, encoded_text))
+            loss = -torch.mean(torch.cosine_similarity(encoded_renders, encoded_text))
     elif args.n_augs > 0:
         loss = 0.0
         for _ in range(args.n_augs):
